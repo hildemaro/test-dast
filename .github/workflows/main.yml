@@ -25,6 +25,12 @@ jobs:
       with:
         python-version: '3.13'  # Puedes especificar la versión de Python que necesites
 
+    - name: Install dependencies
+      run: |
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt  # Asegúrate de que Flask esté en este archivo
+        
+
     - name: Run the application
       run: |
         python ms.py  # Ajusta esto según tu proyecto
